@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  .nav__grid {
+    @apply grid gap-3 md:grid-cols-4;
+  }
+
+  .nav__block {
+    @apply overflow-hidden min-h-[300px];
+  }
+
+  .nav__block--main {
+    @apply col-span-2 row-span-2;
+  }
+
+  .nav__block:nth-child(4) {
+    @apply col-span-2;
+  }
+
+  .nav__block .group {
+    @apply relative overflow-hidden w-full h-full rounded-[6rem] flex flex-col justify-between px-16 py-10 cursor-pointer transition-all duration-300 hover:scale-95;
+  }
+
+  .nav__block:nth-child(1) .group {
+    @apply bg-blue-700;
+  }
+
+  .nav__block:nth-child(2) .group {
+    @apply bg-emerald-50 text-black;
+  }
+
+  .nav__block:nth-child(3) .group {
+    @apply bg-neutral-900;
+  }
+
+  .nav__block:nth-child(4) .group {
+    @apply bg-yellow-200 text-black;
+  }
+
+  .nav__desc {
+    @apply absolute top-1/2 left-0 -translate-y-1/2 scale-50 text-[3rem] opacity-0 transition-all origin-right delay-75 duration-700 text-nowrap  group-hover:opacity-100 group-hover:scale-100;
+  }
+
+  .nav__block--main .nav__desc {
+    @apply text-[6rem] opacity-100 scale-100 group-hover:opacity-0;
+  }
+
+  .projects__card {
+    @apply w-full;
+  }
+
+  .projects__card--featured {
+    @apply col-span-2 min-h-[400px];
+  }
+
+  .projects__card-content {
+    @apply h-full flex flex-col justify-between rounded-[5rem] p-10 transition-all duration-300 hover:scale-[0.98];
+  }
+
+  .projects__card-content:hover img {
+    @apply scale-110;
+  }
+
+  .projects__card:nth-child(1) .projects__card-content {
+    @apply bg-[#FFFFFF] text-black;
+  }
+
+  .projects__card:nth-child(2) .projects__card-content {
+    @apply bg-[#CAE5FE] text-[#071D33];
+  }
+
+  .projects__card:nth-child(3) .projects__card-content {
+    @apply bg-[#072122] text-[#4AA397];
+  }
+
+  .projects__card:nth-child(4) .projects__card-content {
+    @apply bg-[#D1FF95] text-[#0F2101];
+  }
+
+  .projects__card:nth-child(5) .projects__card-content {
+    @apply bg-[#280039] text-[#DAB7DF];
+  }
+ 
+}
+
+@layer utilities {
+  .text-shadow-pink {
+    text-shadow: 1px 1px black
+  }
+}
